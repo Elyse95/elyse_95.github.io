@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elyse's Gallery</title>
+    <link rel="icon" type="image/png" href="lost.png"> <!-- Favicon -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #800080; /* Purple color */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0 0 50% 50%; /* Circular shapes on the sides */
+        }
+        .header-title {
+            font-size: 2em;
+            z-index: 1;
+        }
+        .dark-mode-toggle {
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 50px;
+            width: 50px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+        .dark-mode .dark-mode-toggle {
+            background-color: #333;
+            border-color: #fff;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .main-content p {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .main-content p:hover {
+            color: #800080; /* Change to a purple color */
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #800080, 0 0 40px #800080; /* Glowing effect */
+        }
+        @media only screen and (max-width: 600px) {
+            .header-title {
+                font-size: 1.2em;
+            }
+        }
+        /* Instagram feed widget (placeholder for POWr or Flowbox widget) */
+        .instagram-feed {
+            /* Add styles for your Instagram feed widget here */
+        }
+    </style>
+    <!-- Google Analytics (Replace 'YOUR_TRACKING_ID' with your actual tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <header>
+        <a href="https://www.instagram.com/elyse.95_/">
+            <img src="lost.png" alt="Elyse's Instagram Logo" class="instagram-logo">
+        </a>
+        <h1 class="header-title">Elyse's Gallery</h1>
+        <div id="dark-mode-toggle" class="dark-mode-toggle">🌑</div>
+    </header>
+    <nav>
+        <!-- Navigation links or menu items -->
+    </nav>
+    <main>
+        <section class="welcome-section">
+            <h2>Welcome to Elyse's Gallery</h2>
+            <p>Welcome, dear visitors, to my personal corner on the web! This is a space where you can get a glimpse into my world. I go by the moniker 'Elyse_95'. At the tender age of 17, I hail from the enchanting lands of Morocco.</p>
+            <p>I am currently an 11th Grade Junior with a keen interest in programming. My aspirations are many and varied. At the top of my list is to marry my beloved and to establish my own company leveraging my programming skills.</p>
+            <p>A book that has left a profound impact on me is 'أنتيخريستوس'.</p>
+            <p>I am delighted to have you here and I hope you enjoy exploring my world!</p>
+        </section>
+        <section class="instagram-feed">
+            <!-- Instagram feed integration -->
+        </section>
+        <section class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="YOUR_BACKEND_SCRIPT" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section class="spotify-playlist">
+            <h2>My Spotify Playlist</h2>
+            <a href="https://open.spotify.com/playlist/2LOPYIE0IdgFTaAAssLLDF" target="_blank">Listen to my favorite tunes!</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Elyse's Gallery. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript code to improve interactivity
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle('dark-mode');
+            var toggleButton = document.getElementById('dark-mode-toggle');
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '🌕'; // Full moon emoji for dark mode
+            } else {
+                toggleButton.textContent = '🌑'; // New moon emoji for light mode
+            }
+        }
+
+        // Add event listener to the dark mode toggle button
+        document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
+
+    </script>
+
+</html>
